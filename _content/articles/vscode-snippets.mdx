@@ -1,0 +1,62 @@
+---
+title: 'Visual Studio Code Snippets'
+description: 'A small guide on how to setup vscode snippets to increase your development speed!'
+date: '2020-12-27'
+cover: '/assets/covers/vscode-snippets.png'
+author:
+  name: Lewis Blackburn
+  twitter: zxffo
+  avatar: '/assets/authors/lewisblackburn.png'
+---
+
+Visual studio code doesn't come with a manual as such, it may seem to be limited compared to an IDE, however, it has many features hidden up its sleeve. Though, they are hard to come by, a prime example of this is vscode snippets. These are language specific codeblocks that get autocompleted when met with a prefix.
+
+## Getting started
+
+To create a snippet:
+
+1. **Press** `super + shift + p`
+2. **Search** 'snippets'
+3. **Select** 'Configure User Snippets'
+4. **Pick** the language, project, or global snippet
+5. **Paste** a snippet you create from [Snippet Generator](https://snippet-generator.app/).
+
+![snippet](/assets/posts/snippet.gif)
+
+## Examples
+
+---
+
+```json:typescript.json
+{
+  "console.log": {
+    "prefix": "cl",
+    "body": ["console.log($1)"],
+    "description": "console.log"
+  }
+}
+```
+
+This is a simple snippet that will only show up for use in a TypeScript file.
+
+The snippet prefix is what will activate the codeblock, the body is what will be autocompleted and as you can see you can add tabstops at specific points in the code. The description will give you a brief explanation of what a snippet does when typed.
+
+### Advanced usage
+
+Those were the basic things you can do, however, you can do much more useful things such as:
+
+```json
+{
+  "Util Function": {
+    "prefix": "ut",
+    "body": ["export const $TM_FILENAME_BASE = () => {", "", "}"],
+    "description": "Util Function"
+  }
+}
+```
+
+This gets the file name of the function you typed it in which is useful for things like in react when creating a hook, or a new page which will usually have the same default export as the filename.
+
+### Next Steps
+
+1. Here are the snippets I [use](https://github.com/yarnlock/dotfiles/tree/master/vscode/snippets).

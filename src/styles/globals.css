@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#nprogress .bar {
+  height: 5px;
+  background: #34D399 !important;
+}
+
+html { scroll-behavior: smooth; }
+
+.photos p {
+  @apply items-center grid grid-cols-1 lg:grid-cols-3 xl:grid-cols-4 justify-items-center;
+}
+
+.photos img {
+  @apply transform-gpu hover:scale-105 h-96 transition rounded-xl;
+}
+
+.article h1 {
+  @apply mb-5 text-5xl font-bold mt-14;
+}
+
+.article h2 {
+  @apply mt-10 mb-2 text-4xl font-semibold;
+}
+
+.article h3 {
+  @apply mt-8 mb-2 text-3xl font-normal text-gray-700 dark:text-gray-200;
+}
+
+.article h4 {
+  @apply mt-8 mb-1 text-2xl;
+}
+
+.article h5 {
+  @apply mt-6 mb-1 text-xl text-gray-700 dark:text-gray-200;
+}
+
+.article h6 {
+  @apply mb-0.5 text-gray-500 mt-6 dark:text-gray-700;
+}
+
+.article p {
+  @apply my-4 text-gray-600 dark:text-white leading-7;
+}
+.article a {
+  @apply underline hover:text-blue-500 hover:no-underline;
+}
+.article ol {
+  @apply list-decimal;
+}
+.article ul {
+  @apply list-disc;
+}
+.article li {
+  @apply mt-1;
+}
+.article hr {
+  @apply mt-5 border-none;
+}
+
+.remark-code-title {
+  @apply p-4 mt-4 -mb-2 text-gray-500 border-b-2 border-gray-100 rounded-t-lg dark:border-gray-800 bg-gray-50 dark:bg-gray-900;
+}
+
+.article pre {
+  @apply rounded-b-lg bg-gray-50 dark:bg-gray-900; 
+}
+
+.article code < div {
+  @apply p-2 rounded-lg bg-gray-50 dark:bg-gray-900;
+}
+
+.article code {
+  font-family: 'Fira Code', monospace !important;
+  @apply bg-gray-50 dark:bg-gray-900;
+}
+
+.article img {
+  @apply rounded-lg;
+}
