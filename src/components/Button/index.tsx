@@ -4,7 +4,7 @@ export interface ButtonProps {
   textColor?: string
   bgColor?: string
   className?: string
-  type?: string
+  type: 'button' | 'submit' | 'reset' | undefined
 }
 
 const hover = (colour: string) => {
