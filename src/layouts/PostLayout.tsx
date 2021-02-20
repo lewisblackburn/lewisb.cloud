@@ -28,6 +28,9 @@ export const PostLayout: React.FC<PostLayoutProps> = ({
     url: cover,
     alt: title,
   }
+
+  console.log(readingTime)
+
   return (
     <div>
       <Toaster position="top-center" reverseOrder={false} />
