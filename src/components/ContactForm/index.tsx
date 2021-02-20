@@ -1,5 +1,5 @@
 import Button from 'components/Button'
-import {Field, Form, Formik, FormikHelpers} from 'formik'
+import {Form, Formik, FormikHelpers} from 'formik'
 import dynamic from 'next/dynamic'
 import React from 'react'
 import {FaPaperPlane} from 'react-icons/fa'

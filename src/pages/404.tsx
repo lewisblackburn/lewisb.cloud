@@ -1,4 +1,3 @@
-import Button from 'components/Button'
 import ButtonLink from 'components/Button/components/ButtonLink'
 import Footer from 'components/Footer'
 import Image from 'components/Image'

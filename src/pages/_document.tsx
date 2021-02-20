@@ -1,12 +1,12 @@
-import * as React from 'react'
+import {extractCritical} from 'emotion-server'
 import Document, {
-  Html,
+  DocumentContext,
   Head,
+  Html,
   Main,
   NextScript,
-  DocumentContext,
 } from 'next/document'
-import {extractCritical} from 'emotion-server'
+import * as React from 'react'
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
