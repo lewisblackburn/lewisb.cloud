@@ -25,7 +25,7 @@ export const getStaticProps: GetStaticProps<IndexProps> = async () => {
 export const Index: React.FC<IndexProps> = ({posts}) => {
   return (
     <Fragment>
-      <div className="bg-white dark:bg-black pb-10">
+      <div className="pb-10 bg-white dark:bg-black">
         <Notify />
       </div>
       <Layout>
@@ -56,8 +56,8 @@ export const Index: React.FC<IndexProps> = ({posts}) => {
                 </div>
               </div>
               <div className="w-full md:w-1/2">
-                <div className="w-full h-auto overflow-hidden shadow-xl rounded-md sm:rounded-xl">
-                  <img src="https://cdn.devdojo.com/images/november2020/hero-image.jpeg" />
+                <div className="w-full overflow-hidden bg-center bg-cover shadow-xl h-80 rounded-md sm:rounded-xl">
+                  <img src="https://images.unsplash.com/photo-1505144808419-1957a94ca61e" />
                 </div>
               </div>
             </div>
