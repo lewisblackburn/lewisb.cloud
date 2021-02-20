@@ -18,7 +18,7 @@ export const Footer: React.FC<FooterProps> = ({}) => {
         </div>
         <div className="inline-flex justify-center mt-4 space-x-5 sm:ml-auto sm:mt-0 sm:justify-start">
           <ExternalLink
-            href=""
+            href="https://www.pinterest.co.uk/yarnpkg/"
             sr="Pinterest"
             className="hover:text-pinterest dark:hover:text-pinterest"
           >
@@ -26,7 +26,7 @@ export const Footer: React.FC<FooterProps> = ({}) => {
           </ExternalLink>
 
           <ExternalLink
-            href=""
+            href="https://www.instagram.com/tsconfig/"
             sr="Instagram"
             className="hover:text-instagram dark:hover:text-instagram"
           >
@@ -34,7 +34,7 @@ export const Footer: React.FC<FooterProps> = ({}) => {
           </ExternalLink>
 
           <ExternalLink
-            href=""
+            href="https://twitter.com/zxffo"
             sr="Twitter"
             className="hover:text-twitter dark:hover:text-twitter"
           >
@@ -42,7 +42,7 @@ export const Footer: React.FC<FooterProps> = ({}) => {
           </ExternalLink>
 
           <ExternalLink
-            href=""
+            href="https://github.com/lewisblackburn"
             sr="GitHub"
             className="hover:text-github dark:hover:text-github"
           >

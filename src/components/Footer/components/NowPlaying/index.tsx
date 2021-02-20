@@ -11,7 +11,7 @@ export const NowPlaying: React.FC<NowPlayingProps> = ({}) => {
 
   return (
     <span className="flex items-center justify-center space-x-2">
-      <SiSpotify className="text-green-500" />
+      <SiSpotify className="text-spotify" />
       <span className="inline-flex items-center justify-center">
         {data?.isPlaying ? (
           <a

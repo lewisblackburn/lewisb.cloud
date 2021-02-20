@@ -10,12 +10,11 @@ module.exports = {
     typography: (theme) => ({}),
     extend: {
       colors: {
-        goober: '#34D399',
-        twitter: '#00aced',
-        github: '#1769ff',
-        instagram: '#EF4444',
-        pinterest: '#0b64c3',
-        dribbble: '#a71a28',
+        pinterest: '#E60023',
+        instagram: '#E1306C',
+        twitter: '#1DA1F2',
+        github: '#333',
+        spotify: '#1DB954',
       },
       typography: (theme) => ({
         dark: {

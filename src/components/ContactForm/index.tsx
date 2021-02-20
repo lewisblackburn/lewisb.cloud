@@ -59,7 +59,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({}) => {
                 <FormField name="message" type="textarea" className="h-32" />
                 <Button
                   textColor="text-white"
-                  bgColor="bg-indigo-600"
+                  bgColor="bg-indigo-500"
                   className="justify-center py-4"
                   type="submit"
                 >
