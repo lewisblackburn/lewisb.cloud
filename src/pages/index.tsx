@@ -26,9 +26,7 @@ export const getStaticProps: GetStaticProps<IndexProps> = async () => {
 export const Index: React.FC<IndexProps> = ({posts}) => {
   return (
     <Fragment>
-      <div className="pb-10 bg-white dark:bg-black">
-        <Notify />
-      </div>
+      <Notify />
       <Layout>
         <section className="px-2 py-24 md:px-0">
           <div className="container items-center max-w-6xl px-8 mx-auto xl:px-5">

@@ -26,7 +26,7 @@ const projects = [
     href: 'https://github.com/lewisblackburn/twtr',
     title: 'twtr',
     description:
-      "This was the second course I took and chose to make a twitter clone, the code is a result of Ben Awad's FullStack React GraphQL TypeScript video. You'll find a link to it on the GitHub.",
+      "This was the second course I took and chose to make a twitter clone, the code is a result of Ben Awad's FullStack React GraphQL TypeScript video.",
   },
   {
     href: 'https://github.com/lewisblackburn/templates',

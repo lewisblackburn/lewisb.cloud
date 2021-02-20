@@ -14,12 +14,12 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({
 }) => {
   return (
     <ExternalLink href={href}>
-      <div className="flex flex-col px-8 py-6 h-full mx-auto rounded-lg shadow-lg dark:bg-gray-900 transition">
+      <div className="flex flex-col justify-between h-full lg:h-40 px-8 py-6 mx-auto rounded-lg shadow-lg dark:bg-gray-900 transition">
         <div>
           <span className="text-lg font-medium text-gray-700 dark:text-gray-200">
             {title}
           </span>
-          <p>{children}</p>
+          <p className="hidden lg:block">{children}</p>
         </div>
         <div className="flex items-center justify-between mt-4">
           <div className="flex items-center">
