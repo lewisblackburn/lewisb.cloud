@@ -1,7 +1,7 @@
+import LazyImage from 'components/LazyImage'
 import {MdxFrontMatter} from 'models/MdxFrontMatter'
 import Link from 'next/link'
 import React from 'react'
-import Image from '../../../Image'
 import ArticleDate from './components/ArticleDate'
 
 interface ArticleItemProps {
@@ -13,11 +13,7 @@ export const ArticleItem: React.FC<ArticleItemProps> = ({post}) => {
     <Link href={`/article/${post.slug}`}>
       <a className="transition">
         <div>
-          <Image
-            src={post.cover}
-            alt={post.title}
-            className="h-56 rounded-lg"
-          />
+          <LazyImage src={post.cover} alt={post.title} />
           <h2 className="mt-5 mb-2 text-lg font-semibold text-gray-900 dark:text-gray-100">
             {post.title}
           </h2>

@@ -31,10 +31,6 @@ export default class MyDocument extends Document {
       <Html>
         <Head>
           <link
-            rel="icon"
-            href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/271/cloud-with-lightning-and-rain_26c8-fe0f.png"
-          />
-          <link
             href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css"
             rel="stylesheet"
           />

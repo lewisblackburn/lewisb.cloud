@@ -1,6 +1,6 @@
 import ButtonLink from 'components/Button/components/ButtonLink'
 import Footer from 'components/Footer'
-import Image from 'components/Image'
+import LazyImage from 'components/LazyImage'
 import React from 'react'
 
 interface FourOhFourProps {}
@@ -26,11 +26,7 @@ export const FourOhFour: React.FC<FourOhFourProps> = ({}) => {
             </div>
           </div>
           <div>
-            <Image
-              src="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.themarysue.com%2Fwp-content%2Fuploads%2F2014%2F06%2FIT-crowd-burning-keyboard.gif&f=1&nofb=1"
-              alt="test"
-              className="w-full h-full rounded-lg"
-            />
+            <LazyImage src="/assets/404.gif" alt="test" />
           </div>
         </div>
       </div>

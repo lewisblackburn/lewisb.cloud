@@ -1,6 +1,7 @@
 import Articles from 'components/Articles'
 import Button from 'components/Button'
 import FAQ from 'components/FAQ'
+import LazyImage from 'components/LazyImage'
 import Notify from 'components/Notify'
 import Projects from 'components/Projects'
 import {Layout} from 'layouts/Layout'
@@ -56,9 +57,10 @@ export const Index: React.FC<IndexProps> = ({posts}) => {
                 </div>
               </div>
               <div className="w-full md:w-1/2">
-                <div className="w-full overflow-hidden bg-center bg-cover shadow-xl h-80 rounded-md sm:rounded-xl">
-                  <img src="https://images.unsplash.com/photo-1505144808419-1957a94ca61e" />
-                </div>
+                <LazyImage
+                  src="/assets/background.jpg"
+                  alt="background image"
+                />
               </div>
             </div>
           </div>

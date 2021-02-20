@@ -63,7 +63,7 @@ export const PostLayout: React.FC<PostLayoutProps> = ({
       <Layout>
         <div className={'article max-w-4xl mx-auto py-20'}>
           <div className={'flex flex-col text-center mb-10'}>
-            <ArticleImage href="/" src={cover} alt={title} className="h-64" />
+            <ArticleImage href="/" src={cover} alt={title} size="sm" />
             <h1 className={'font-semibold text-5xl'}>{title}</h1>
             <div className={'flex flex-col gap-3'}>
               <ArticleDate dateString={date} />

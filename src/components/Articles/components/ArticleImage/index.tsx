@@ -1,6 +1,6 @@
+import LazyImage, {ImageProps} from 'components/LazyImage'
 import Link from 'next/link'
 import React from 'react'
-import Image, {ImageProps} from '../../../Image'
 
 interface ArticleImageProps extends ImageProps {
   href: string
@@ -10,13 +10,13 @@ export const ArticleImage: React.FC<ArticleImageProps> = ({
   href = '/',
   src,
   alt,
-  loading,
+  size,
   className,
 }) => {
   return (
     <Link href={href}>
       <a className="transform-gpu hover:scale-105 transition">
-        <Image src={src} alt={alt} loading={loading} className={className} />
+        <LazyImage src={src} alt={alt} className={className} size={size} />
       </a>
     </Link>
   )
