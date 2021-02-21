@@ -1,10 +1,10 @@
 {
   "title": "Home",
   "titleTemplate": "%s",
-  "description": "This is my Next.js TypeScript Tailwind Site",
+  "description": "Hi, I'm Lewis and I create Full-Stack Web Apps using TypeScript, React and GraphQl.",
   "favicon": "/favicon.ico",
   "additionalMetaTags": [
-    {"property": "author", "content": "joel hooks"},
+    {"property": "author", "content": "lewis blackburn"},
     {
       "property": "keywords",
       "content": ""
@@ -12,14 +12,14 @@
   ],
   "twitter": {
     "cardType": "summary",
-    "handle": "jhooks",
-    "site": "jhooks"
+    "handle": "zxffo",
+    "site": "zxffo"
   },
   "openGraph": {
     "type": "website",
-    "site_name": "Joel's Site",
+    "site_name": "Lewis's Site",
     "profile": {
-      "firstName": "Joel"
+      "firstName": "Lewis"
     },
     "images": [
       {
