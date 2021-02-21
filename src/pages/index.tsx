@@ -50,7 +50,7 @@ export const Index: React.FC<IndexProps> = ({posts}) => {
                       Latest Article
                       <FiArrowRight className="ml-1" />
                     </Button>
-                    <Button>Currently Playing</Button>
+                    <Button>Now Playing</Button>
                   </div>
                 </div>
               </div>
