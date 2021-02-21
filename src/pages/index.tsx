@@ -45,7 +45,7 @@ export const Index: React.FC<IndexProps> = ({posts}) => {
                     Hi, I'm Lewis and I create Full-Stack Web Apps using
                     TypeScript, React and GraphQl.
                   </p>
-                  <div className="relative flex flex-col sm:flex-row sm:space-x-4">
+                  <div className="relative flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
                     <Button textColor="text-white" bgColor="bg-indigo-500">
                       Latest Article
                       <FiArrowRight className="ml-1" />

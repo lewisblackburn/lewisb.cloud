@@ -14,13 +14,9 @@ export const ArticleItem: React.FC<ArticleItemProps> = ({post}) => {
       <a className="transition">
         <div>
           <LazyImage src={post.cover} alt={post.title} />
-          <h2 className="mt-5 mb-2 text-lg font-semibold text-gray-900 dark:text-gray-100">
-            {post.title}
-          </h2>
-          <p className="mb-3 text-sm font-normal text-gray-500 truncate">
-            {post.description}
-          </p>
-          <p className="mb-3 text-sm font-normal text-gray-500">
+          <h2 className="mt-5 mb-2">{post.title}</h2>
+          <p className="mb-3 truncate">{post.description}</p>
+          <p className="mb-3">
             <span className="mr-1 font-medium text-gray-900 dark:text-gray-100">
               {post.author.name}
             </span>

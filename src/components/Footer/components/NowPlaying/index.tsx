@@ -23,12 +23,10 @@ export const NowPlaying: React.FC<NowPlayingProps> = ({}) => {
             {data.title}
           </a>
         ) : (
-          <p className="font-medium text-black dark:text-gray-200">
-            Not Playing
-          </p>
+          <p>Not Playing</p>
         )}
         <span className="mx-2 text-black dark:text-gray-300">{' – '}</span>
-        <p className="text-black dark:text-gray-300 max-w-max">
+        <p className="max-w-max">
           {/* {data?.artist ?? 'Spotify'} */}
           {data?.isPlaying ? data?.artist : 'Spotify'}
         </p>
