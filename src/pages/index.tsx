@@ -43,7 +43,7 @@ export const Index: React.FC<IndexProps> = ({posts}) => {
                   </h1>
                   <p className="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">
                     Hi, I'm Lewis and I create Full-Stack Web Apps using
-                    TypeScript, React and GraphQl.
+                    TypeScript, React and GraphQL.
                   </p>
                   <div className="relative flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
                     <Button textColor="text-white" bgColor="bg-indigo-500">
