@@ -27,12 +27,14 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 
-export const getStaticProps: GetStaticProps<TagProps> = async ({params}) => {
+export const getStaticProps: GetStaticProps<TagProps> = async ({
+  params,
+}: any) => {
   const {tag} = params
   const files: MdxFrontMatter[] = await getAllFilesFrontMatter('articles')
   const posts = files
     .sort((a, b) => Number(new Date(b.date)) - Number(new Date(a.date)))
-    .filter((post) => {
+    .filter((post: any) => {
       if (post.tags.includes(tag)) {
         return post
       }
