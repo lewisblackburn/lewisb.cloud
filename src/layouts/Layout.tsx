@@ -1,5 +1,5 @@
-import Footer from 'components/Footer'
-import Header from 'components/Header'
+import {Activity} from 'components/Activity'
+import {Header} from 'components/Header'
 import React, {Fragment} from 'react'
 
 interface LayoutProps {}
@@ -7,10 +7,16 @@ interface LayoutProps {}
 export const Layout: React.FC<LayoutProps> = ({children}) => {
   return (
     <Fragment>
-      <div className="text-black bg-white dark:text-white dark:bg-black transition">
-        <Header />
+      <div className="transition">
+        <div className="max-w-6xl mx-auto py-12">
+          <Header />
+        </div>
         {children}
-        <Footer />
+        <div className="bg-white">
+          <div className="grid place-items-center max-w-6xl mx-auto px-6 py-12">
+            <Activity />
+          </div>
+        </div>
       </div>
     </Fragment>
   )

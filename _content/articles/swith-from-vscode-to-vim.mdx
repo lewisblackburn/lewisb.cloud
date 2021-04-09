@@ -4,6 +4,7 @@ description: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam 
 '
 date: '2021-01-31'
 cover: '/assets/covers/switch-from-vscode-to-vim.jpg'
+tags: ["vscode", "typescript"]
 author:
   name: Lewis Blackburn
   twitter: zxffo
@@ -16,17 +17,17 @@ This guide not only goes through the process of switching to VIM (neovim), but c
 
 ## The Installation
 
-
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 
-### Download 
+### Download
+
 ```bash:~/downloads
 git clone https://github.com/lewisblackburn/dotfiles
 ```
 
 ### Transport
 
-WARN: This will remove your current .config 
+WARN: This will remove your current .config
 
 ```bash:~/
 sudo rm -rf ~/.config
@@ -34,6 +35,7 @@ cp -r ~/downloads/dotfiles/.config ~/.config
 ```
 
 ### Install Prerequisites
+
 ```bash:~/downloads/dotfiles/scripts
 cd dotfiles/scripts
 sh install.sh # bash install.sh || ./install.sh
@@ -46,6 +48,3 @@ sh install.sh # bash install.sh || ./install.sh
 ### Plugins
 
 ## Conclusion
-
-
-

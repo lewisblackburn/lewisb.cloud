@@ -3724,6 +3724,11 @@ date-fns@2.17.0:
   resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-2.17.0.tgz#afa55daea539239db0a64e236ce716ef3d681ba1"
   integrity sha512-ZEhqxUtEZeGgg9eHNSOAJ8O9xqSgiJdrL0lzSSfMF54x6KXWJiOH/xntSJ9YomJPrYH/p08t6gWjGWq1SDJlSA==
 
+dayjs@1.10.4:
+  version "1.10.4"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.10.4.tgz#8e544a9b8683f61783f570980a8a80eaf54ab1e2"
+  integrity sha512-RI/Hh4kqRc1UKLOAf/T5zdMMX5DQIlDxwUe3wSyMMnEbGunnpENCdbUgM+dW7kXidZqCttBrmw7BhN4TMddkCw==
+
 debug@4, debug@^4.0.0, debug@^4.1.0, debug@^4.1.1, debug@^4.2.0:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/debug/-/debug-4.2.0.tgz#7f150f93920e94c58f5574c2fd01a3110effe7f1"
@@ -9331,6 +9336,13 @@ swr@0.4.2:
   dependencies:
     dequal "2.0.2"
 
+swr@^0.5.2:
+  version "0.5.5"
+  resolved "https://registry.yarnpkg.com/swr/-/swr-0.5.5.tgz#c72c1615765f33570a16bbb13699e3ac87eaaa3a"
+  integrity sha512-u4mUorK9Ipt+6LEITvWRWiRWAQjAysI6cHxbMmMV1dIdDzxMnswWo1CyGoyBHXX91CchxcuoqgFZ/ycx+YfhCA==
+  dependencies:
+    dequal "2.0.2"
+
 symbol-tree@^3.2.4:
   version "3.2.4"
   resolved "https://registry.yarnpkg.com/symbol-tree/-/symbol-tree-3.2.4.tgz#430637d248ba77e078883951fb9aa0eed7c63fa2"
@@ -9888,6 +9900,13 @@ use-context-selector@1.3.7:
   version "1.3.7"
   resolved "https://registry.yarnpkg.com/use-context-selector/-/use-context-selector-1.3.7.tgz#4e59270baa73417dcb0c5c6c124359fd0e8b3aaf"
   integrity sha512-O94hcN9UDAPTC4Fsm3p6Og5PVlhTEeKqxJX3HuBbVSuevOSPLDZxowFUmx49/fnu9jpgY83Nd3TALJVDRtYzdQ==
+
+use-lanyard@0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/use-lanyard/-/use-lanyard-0.0.5.tgz#880ba89254249c3ba12b79e77cb8cc9409cbb81b"
+  integrity sha512-uvxsaQDjLklsE6Vyxs1R7wfWKfJ+w5T7eOSV/IPGeRTxHC9w2O2bU2hLSWABNljG18yALL3kcAHkuwTPR1gM0A==
+  dependencies:
+    swr "^0.5.2"
 
 use-subscription@1.5.1:
   version "1.5.1"

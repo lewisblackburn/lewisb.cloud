@@ -1,15 +1,11 @@
-import Articles from 'components/Articles'
-import Button from 'components/Button'
-import FAQ from 'components/FAQ'
-import LazyImage from 'components/LazyImage'
-import Notify from 'components/Notify'
-import Projects from 'components/Projects'
+import dayjs from 'dayjs'
 import {Layout} from 'layouts/Layout'
 import {getAllFilesFrontMatter} from 'lib/mdx'
 import {MdxFrontMatter} from 'models/MdxFrontMatter'
 import {GetStaticProps} from 'next'
+import dynamic from 'next/dynamic'
+import Link from 'next/link'
 import React, {Fragment} from 'react'
-import {FiArrowRight} from 'react-icons/fi'
 
 interface IndexProps {
   posts: MdxFrontMatter[]
@@ -23,50 +19,72 @@ export const getStaticProps: GetStaticProps<IndexProps> = async () => {
   return {props: {posts}}
 }
 
+const Map = dynamic(() => import('../components/Map'), {
+  loading: () => <div className={'w-full h-full bg-gray-100'}></div>,
+  ssr: false,
+})
+
 export const Index: React.FC<IndexProps> = ({posts}) => {
   return (
     <Fragment>
-      <Notify />
       <Layout>
-        <section className="px-2 py-24 md:px-0">
-          <div className="container items-center max-w-6xl px-8 mx-auto xl:px-5">
-            <div className="flex flex-wrap items-center sm:-mx-3">
-              <div className="w-full md:w-1/2 md:px-3">
-                <div className="w-full pb-6 space-y-6 sm:max-w-md lg:max-w-lg md:space-y-4 lg:space-y-8 xl:space-y-9 sm:pr-5 lg:pr-0 md:pb-0">
-                  <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-gray-300 sm:text-5xl md:text-4xl lg:text-5xl xl:text-6xl">
-                    <span className="block xl:inline">
-                      Full-Stack <br />
-                    </span>
-                    <span className="block text-indigo-600 xl:inline">
-                      Web Developer
-                    </span>
-                  </h1>
-                  <p className="mx-auto text-base text-gray-500 sm:max-w-md lg:text-xl md:max-w-3xl">
-                    Hi, I'm Lewis and I create Full-Stack Web Apps using
-                    TypeScript, React and GraphQL.
-                  </p>
-                  <div className="relative flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0">
-                    <Button textColor="text-white" bgColor="bg-indigo-500">
-                      Latest Article
-                      <FiArrowRight className="ml-1" />
-                    </Button>
-                    <Button>Now Playing</Button>
-                  </div>
-                </div>
-              </div>
-              <div className="w-full md:w-1/2">
-                <LazyImage
-                  src="/assets/background.jpg"
-                  alt="background image"
-                />
-              </div>
+        <div className="bg-gray-100">
+          <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center max-w-6xl mx-auto px-6 py-12">
+            <div className="flex flex-col space-y-5">
+              <h1 className="font-mono font-bold tracking-normal text-4xl">
+                I'm Lewis Blackburn.
+              </h1>
+              <p className="text-xl">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+                repudiandae dolore nemo consequuntur maxime exercitationem
+                aliquam officia enim fugit blanditiis excepturi placeat cum fuga
+                modi voluptatum, nisi eligendi. Officiis, cum.
+              </p>
             </div>
+            <img
+              className="hidden lg:block rounded-lg justify-self-end border-2 border-black h-96"
+              src="/assets/authors/lewisblackburn.png"
+              alt="me"
+            />
           </div>
-        </section>
-
-        <Projects />
-        <Articles posts={posts} />
-        <FAQ />
+        </div>
+        <div className="bg-gray-50">
+          <div className="grid place-items-center max-w-6xl mx-auto px-6 py-12">
+            {posts.map((post, number) => (
+              <Link href={`/article/${post.slug}`}>
+                <a
+                  key={number}
+                  className="button grid grid-cols-2 items-center w-full"
+                  style={{gridTemplateColumns: '100px 1fr'}}
+                >
+                  <time>{dayjs(post.date).format('MMM D')}</time>
+                  <span className="font-medium">{post.title}</span>
+                </a>
+              </Link>
+            ))}
+          </div>
+        </div>
+        <div className="bg-white">
+          <div className="grid place-items-center max-w-6xl mx-auto px-6 py-12">
+            {[0, 0, 0, 0].map((project: any, number) => (
+              <Link href={``}>
+                <a
+                  key={number}
+                  className="button grid grid-cols-2 items-center w-full"
+                  style={{gridTemplateColumns: '100px 1fr'}}
+                >
+                  <span>title</span>
+                  <span className="font-medium">description</span>
+                </a>
+              </Link>
+            ))}
+          </div>
+        </div>
+        <div className="bg-white">
+          <div className="grid place-items-center max-w-6xl mx-auto px-6 py-12 h-96">
+            <Map />
+          </div>
+        </div>
       </Layout>
     </Fragment>
   )

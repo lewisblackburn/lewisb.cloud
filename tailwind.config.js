@@ -9,13 +9,6 @@ module.exports = {
   theme: {
     typography: (theme) => ({}),
     extend: {
-      colors: {
-        pinterest: '#E60023',
-        instagram: '#E1306C',
-        twitter: '#1DA1F2',
-        github: '#333',
-        spotify: '#1DB954',
-      },
       typography: (theme) => ({
         dark: {
           css: {
@@ -24,7 +17,7 @@ module.exports = {
         },
       }),
       fontFamily: {
-        mono: ['Roboto Mono', 'monospace'],
+        mono: ['DM Mono,Georgia,serif', 'monospace'],
         fira: ['Fira Code', 'monospace'],
       },
     },

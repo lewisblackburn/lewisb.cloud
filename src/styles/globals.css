@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 ::selection {
-	background: #cceae7;
-	color: #263238;
+  background: #cceae7;
+  color: #263238;
 }
 
 #nprogress .bar {
@@ -14,12 +14,21 @@
   background: #47a3f3 !important;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
+
+.button {
+  @apply font-mono px-6 py-3 rounded-md transition duration-200 ease-in-out;
+}
+
+.button:hover {
+  @apply bg-gray-100;
+}
 
 .article h1 {
   @apply mb-5 text-5xl font-bold mt-14;
 }
-
 .article h2 {
   @apply mt-10 mb-2 text-4xl font-semibold;
 }
@@ -43,9 +52,6 @@ html { scroll-behavior: smooth; }
 .article p {
   @apply my-4 text-gray-600 dark:text-white leading-7;
 }
-.article a {
-  @apply underline hover:text-blue-500 hover:no-underline;
-}
 .article ol {
   @apply list-decimal;
 }
@@ -68,7 +74,7 @@ html { scroll-behavior: smooth; }
 }
 
 .article pre {
-  @apply rounded-b-lg bg-gray-50 dark:bg-gray-900; 
+  @apply rounded-b-lg bg-gray-50 dark:bg-gray-900;
 }
 
 .article code < div {
@@ -83,4 +89,3 @@ html { scroll-behavior: smooth; }
 .article img {
   @apply rounded-lg;
 }
-

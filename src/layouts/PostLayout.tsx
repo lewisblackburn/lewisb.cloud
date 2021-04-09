@@ -1,7 +1,8 @@
-import ArticleImage from 'components/Articles/components/ArticleImage'
-import ArticleDate from 'components/Articles/components/ArticleItem/components/ArticleDate'
+import LazyImage from 'components/LazyImage'
+import dayjs from 'dayjs'
 import {MdxFrontMatter} from 'models/MdxFrontMatter'
 import {ArticleJsonLd, NextSeo} from 'next-seo'
+import Link from 'next/link'
 import React from 'react'
 import {Toaster} from 'react-hot-toast'
 import {Layout} from '../layouts/Layout'
@@ -22,6 +23,7 @@ export const PostLayout: React.FC<PostLayoutProps> = ({
     author,
     readingTime,
     slug,
+    tags,
   } = frontMatter
   const url = `https://lewisb.cloud/article/${slug}`
   const image = {
@@ -29,7 +31,7 @@ export const PostLayout: React.FC<PostLayoutProps> = ({
     alt: title,
   }
 
-  console.log(readingTime)
+  console.log(tags, readingTime)
 
   return (
     <div>
@@ -61,21 +63,33 @@ export const PostLayout: React.FC<PostLayoutProps> = ({
         url={url}
       />
       <Layout>
-        <div className={'article max-w-4xl mx-auto py-20 px-8 md:px-0'}>
+        <div className={'article max-w-5xl mx-auto px-5 xl:p-0'}>
           <div className={'flex flex-col text-center mb-10'}>
-            <ArticleImage href="/" src={cover} alt={title} size="sm" />
+            <LazyImage src={cover} alt={title} size="sm" />
             <h1 className={'font-semibold text-5xl'}>{title}</h1>
-            <div className={'flex flex-col gap-3'}>
-              <ArticleDate dateString={date} />
-              <div>
+            <div className={'flex items-center flex-col gap-3'}>
+              <p className="flex space-x-1">
+                by
                 <a
-                  style={{textDecoration: 'none'}}
-                  className={'text-blue-500 font-semibold'}
+                  className="font-mono font-medium mx-2"
                   href={`https://twitter.com/${author.twitter}`}
                   target="_blank"
                 >
-                  @{author.twitter}
+                  {author.name}
                 </a>
+                on
+                <time className="font-mono">
+                  {dayjs(date).format('MMMM DD, YYYY')}
+                </time>
+              </p>
+              <div className="flex space-x-4">
+                {tags.map((tag, index) => (
+                  <Link href={`/tag/${tag}`}>
+                    <a className="button bg-gray-50" key={index}>
+                      {tag}
+                    </a>
+                  </Link>
+                ))}
               </div>
             </div>
           </div>

@@ -3,6 +3,7 @@ export interface MdxFrontMatter {
   description: string
   date: string
   cover: string
+  tags: string[]
   author: {
     name: string
     twitter: string

@@ -1,4 +1,3 @@
-import ButtonLink from 'components/Button/components/ButtonLink'
 import LazyImage from 'components/LazyImage'
 import Layout from 'layouts/Layout'
 import React from 'react'
@@ -21,10 +20,7 @@ export const FourOhFour: React.FC<FourOhFourProps> = ({}) => {
               <p className="mb-5 text-base text-left text-gray-800 dark:text-gray-200 md:text-xl">
                 You might have the wrong address, or the page may have moved.
               </p>
-              <div className="flex space-x-5">
-                <ButtonLink href="/">Back to homepage</ButtonLink>
-                <ButtonLink href="/resume">Contact Me</ButtonLink>
-              </div>
+              <div className="flex space-x-5"></div>
             </div>
             <div>
               <LazyImage src="/assets/404.gif" alt="test" />
