@@ -7,7 +7,7 @@
     {"property": "author", "content": "Lewis Blackburn"},
     {
       "property": "keywords",
-      "content": ""
+      "content": "zxffo, react, nextjs, typescript, graphql, postgresql, prisma, node"
     }
   ],
   "twitter": {
@@ -17,13 +17,14 @@
   },
   "openGraph": {
     "type": "website",
-    "site_name": "Lewis's Site",
+    "site_name": "Lewis Blackburn",
     "profile": {
-      "firstName": "Lewis"
+      "firstName": "Lewis",
+      "lastName": "Blackburn"
     },
     "images": [
       {
-        "url": "assets/authors/lewisblackburn.png",
+        "url": "/assets/authors/lewisblackburn.png",
         "width": 384,
         "height": 384
       }
