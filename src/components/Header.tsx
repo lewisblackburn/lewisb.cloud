@@ -26,7 +26,7 @@ const HeaderLink: React.FC<{
 export const Header: React.FC<HeaderProps> = () => {
   return (
     <header className="flex justify-center md:justify-between items-center">
-      <HeaderLink href="/" icon="💾" className="font-mono">
+      <HeaderLink href="/" icon="🕊" className="font-mono">
         Lewis Blackburn
       </HeaderLink>
       <div className="hidden md:flex items-center">

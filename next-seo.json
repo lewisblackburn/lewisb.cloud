@@ -1,10 +1,10 @@
 {
-  "title": "Home",
+  "title": "Lewis Blackburn",
   "titleTemplate": "%s",
-  "description": "Hi, I'm Lewis and I create Full-Stack Web Apps using TypeScript, React and GraphQl.",
-  "favicon": "/favicon.ico",
+  "description": "Hi, I'm Lewis, A Full-Stack React, Typescript and GraphQL web developer focusing in backend development using PostgreSQL, Prisma and Node. This website is a collection of projects and things I've learnt over the years.",
+  "favicon": "./favicon.png",
   "additionalMetaTags": [
-    {"property": "author", "content": "lewis blackburn"},
+    {"property": "author", "content": "Lewis Blackburn"},
     {
       "property": "keywords",
       "content": ""
@@ -23,9 +23,9 @@
     },
     "images": [
       {
-        "url": "/images/og.jpg",
-        "width": 1280,
-        "height": 720
+        "url": "assets/authors/lewisblackburn.png",
+        "width": 384,
+        "height": 384
       }
     ]
   }

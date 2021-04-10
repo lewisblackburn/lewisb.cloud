@@ -35,10 +35,10 @@ export const Index: React.FC<IndexProps> = ({posts}) => {
                 I'm Lewis Blackburn.
               </h1>
               <p className="text-xl">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-                repudiandae dolore nemo consequuntur maxime exercitationem
-                aliquam officia enim fugit blanditiis excepturi placeat cum fuga
-                modi voluptatum, nisi eligendi. Officiis, cum.
+                Hi, I'm Lewis, A Full-Stack React, Typescript and GraphQL web
+                developer focusing in backend development using PostgreSQL,
+                Prisma and Node. This website is a collection of projects and
+                things I've learnt over the years.
               </p>
             </div>
             <img
