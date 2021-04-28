@@ -11,6 +11,8 @@ interface IndexProps {
   posts: MdxFrontMatter[]
 }
 
+// "https://www.figma.com/file/MNbvOwgE5ghxlHEFB9OzZ4/Untitled"
+
 export const getStaticProps: GetStaticProps<IndexProps> = async () => {
   const files: MdxFrontMatter[] = await getAllFilesFrontMatter('articles')
   const posts = files.sort(
@@ -28,7 +30,7 @@ export const Index: React.FC<IndexProps> = ({posts}) => {
   return (
     <Fragment>
       <Layout>
-        <div className="bg-gray-100">
+        <div>
           <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center max-w-6xl mx-auto px-6 py-12">
             <div className="flex flex-col space-y-5">
               <h1 className="font-mono font-bold tracking-normal text-4xl">
@@ -41,14 +43,11 @@ export const Index: React.FC<IndexProps> = ({posts}) => {
                 things I've learnt over the years.
               </p>
             </div>
-            <img
-              className="hidden lg:block rounded-lg justify-self-end border-2 border-black h-96"
-              src="/assets/authors/lewisblackburn.png"
-              alt="me"
-            />
+
+            <div>img later</div>
           </div>
         </div>
-        <div className="bg-gray-50">
+        <div>
           <div className="grid place-items-center max-w-6xl mx-auto px-6 py-12">
             {posts.map((post, number) => (
               <Link href={`/article/${post.slug}`}>
@@ -64,7 +63,7 @@ export const Index: React.FC<IndexProps> = ({posts}) => {
             ))}
           </div>
         </div>
-        <div className="bg-white">
+        <div>
           <div className="grid place-items-center max-w-6xl mx-auto px-6 py-12">
             {[0, 0, 0, 0].map((project: any, number) => (
               <Link href={``}>
