@@ -3,7 +3,6 @@ import {Layout} from 'layouts/Layout'
 import {getAllFilesFrontMatter} from 'lib/mdx'
 import {MdxFrontMatter} from 'models/MdxFrontMatter'
 import {GetStaticProps} from 'next'
-import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import React from 'react'
 
@@ -19,10 +18,10 @@ export const getStaticProps: GetStaticProps<IndexProps> = async () => {
   return {props: {posts}}
 }
 
-const Map = dynamic(() => import('../components/Map'), {
-  loading: () => <div className={'w-full h-full bg-gray-100'}></div>,
-  ssr: false,
-})
+// const Map = dynamic(() => import('../components/Map'), {
+//   loading: () => <div className={'w-full h-full bg-gray-100'}></div>,
+//   ssr: false,
+// })
 
 export const Index: React.FC<IndexProps> = ({posts}) => {
   return (
