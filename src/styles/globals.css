@@ -16,6 +16,10 @@ html {
   scroll-behavior: smooth;
 }
 
+.button {
+  @apply px-5 py-2 bg-gray-100 dark:bg-gray-900 hover:bg-gray-50 rounded-md;
+}
+
 .article h1 {
   @apply mb-5 text-5xl font-bold mt-14;
 }

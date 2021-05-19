@@ -63,8 +63,8 @@ export const PostLayout: React.FC<PostLayoutProps> = ({
         url={url}
       />
       <Layout>
-        <div className={'article max-w-5xl mx-auto px-5 xl:p-0'}>
-          <div className={'flex flex-col text-center mb-10'}>
+        <div className={'article max-w-5xl mx-auto px-5 xl:p-0 xl:pb-10'}>
+          <div className={'flex flex-col text-center'}>
             <LazyImage src={cover} alt={title} size="sm" />
             <h1 className={'font-semibold text-5xl'}>{title}</h1>
             <div className={'flex items-center flex-col gap-3'}>

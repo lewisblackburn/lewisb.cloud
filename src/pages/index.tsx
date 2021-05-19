@@ -1,10 +1,36 @@
+import DarkModeToggle from 'components/DarkModeToggle'
 import {NowPlaying} from 'components/NowPlaying'
 import {Layout} from 'layouts/Layout'
 import {getAllFilesFrontMatter} from 'lib/mdx'
 import {MdxFrontMatter} from 'models/MdxFrontMatter'
 import {GetStaticProps} from 'next'
 import Link from 'next/link'
-import React from 'react'
+import React, {ReactNode} from 'react'
+import {IconType} from 'react-icons/lib'
+import {
+  SiBabel,
+  SiCss3,
+  SiDiscord,
+  SiDocker,
+  SiGit,
+  SiGithub,
+  SiHtml5,
+  SiMarkdown,
+  SiNextDotJs,
+  SiNodeDotJs,
+  SiPostgresql,
+  SiReact,
+  SiRedis,
+  SiServerless,
+  SiSlack,
+  SiSpotify,
+  SiTailwindcss,
+  SiTypescript,
+  SiVisualstudiocode,
+  SiWebpack,
+  SiYarn,
+} from 'react-icons/si'
+import {Tooltip} from 'react-tippy'
 
 interface IndexProps {
   posts: MdxFrontMatter[]
@@ -26,12 +52,13 @@ export const getStaticProps: GetStaticProps<IndexProps> = async () => {
 export const Index: React.FC<IndexProps> = ({posts}) => {
   return (
     <Layout>
-      <div className="flex items-center space-x-2">
+      <div className="flex items-center space-x-5">
         <img
           className="w-16 h-16 rounded-full"
           src="https://pbs.twimg.com/profile_images/1388587656246878217/LzMeoefq_400x400.jpg"
           alt=""
         />
+        <NowPlaying />
       </div>
       <div className="flex flex-col space-y-5 my-10 w-96">
         <h1 className="font-semibold">
@@ -51,38 +78,43 @@ export const Index: React.FC<IndexProps> = ({posts}) => {
             itaque quos. Officia similique temporibus quia voluptatibus
             necessitatibus repellendus quos omnis incidunt reiciendis?
           </p>
+
           <div className="flex space-x-5">
-            <a href="">Twitter</a>
-            <a href="">Discord</a>
-            <a href="">Github</a>
+            <DarkModeToggle />
+            <a className="button" href="">
+              Twitter
+            </a>
+            <a className="button" href="">
+              Github
+            </a>
           </div>
         </div>
         <div>
           <h1 className="font-semibold">Projects</h1>
           <div className="flex flex-col space-y-5 my-5">
             <Link href="">
-              <a className="px-5 py-2 bg-gray-900 rounded-md" href="">
+              <a className="button" href="">
                 typegraphql-prisma-apollo-react
               </a>
             </Link>
             <Link href="">
-              <a className="px-5 py-2 bg-gray-900 rounded-md" href="">
+              <a className="button" href="">
                 lewisb.cloud
               </a>
             </Link>
 
             <Link href="">
-              <a className="px-5 py-2 bg-gray-900 rounded-md" href="">
+              <a className="button" href="">
                 ilistened-to
               </a>
             </Link>
             <Link href="">
-              <a className="px-5 py-2 bg-gray-900 rounded-md" href="">
+              <a className="button" href="">
                 tweetah
               </a>
             </Link>
             <Link href="">
-              <a className="px-5 py-2 bg-gray-900 rounded-md" href="">
+              <a className="button" href="">
                 dotfiles
               </a>
             </Link>
@@ -93,16 +125,51 @@ export const Index: React.FC<IndexProps> = ({posts}) => {
           <div className="flex flex-col space-y-5 my-5">
             {posts.map((post, index) => (
               <Link href={`article/${post.slug}`}>
-                <a className="px-5 py-2 bg-gray-900 rounded-md" href="">
+                <a className="button" href="">
                   {post.title}
                 </a>
               </Link>
             ))}
           </div>
         </div>
-        <NowPlaying />
+        <footer className="pt-5">
+          <Icons>
+            <Icon icon={SiTypescript} title="TypeScript" />
+            <Icon icon={SiReact} title="React.js" />
+            <Icon icon={SiRedis} title="Redis" />
+            <Icon icon={SiNodeDotJs} title="Node.js" />
+            <Icon icon={SiNextDotJs} title="Next.js" />
+            <Icon icon={SiPostgresql} title="PostgreSQL" />
+            <Icon icon={SiDocker} title="Docker" />
+            <Icon icon={SiWebpack} title="Webpack" />
+            <Icon icon={SiBabel} title="Babel" />
+            <Icon icon={SiYarn} title="Yarn" />
+            <Icon icon={SiCss3} title="CSS3" />
+            <Icon icon={SiHtml5} title="HTML5" />
+            <Icon icon={SiSpotify} title="Spotify" />
+            <Icon icon={SiTailwindcss} title="TailwindCSS" />
+            <Icon icon={SiServerless} title="Serverless" />
+            <Icon icon={SiGit} title="Git" />
+            <Icon icon={SiGithub} title="GitHub" />
+            <Icon icon={SiSlack} title="Slack" />
+            <Icon icon={SiDiscord} title="Discord" />
+            <Icon icon={SiMarkdown} title="Markdown" />
+            <Icon icon={SiVisualstudiocode} title="VSCode" />
+          </Icons>
+        </footer>
       </div>
     </Layout>
+  )
+}
+function Icons({children}: {children: ReactNode}) {
+  return <div className="flex ml-1 space-x-5 text-gray-500">{children}</div>
+}
+
+function Icon({icon, title}: {icon: IconType; title: string}) {
+  return (
+    <Tooltip html={<div className="text-black dark:text-white">{title}</div>}>
+      {icon({className: 'inline'})}
+    </Tooltip>
   )
 }
 
