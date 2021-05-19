@@ -60,7 +60,7 @@ export const Index: React.FC<IndexProps> = ({posts}) => {
         />
         <NowPlaying />
       </div>
-      <div className="flex flex-col space-y-5 my-10 w-96">
+      <div className="flex flex-col space-y-5 my-10 w-full xl:w-7/12">
         <h1 className="font-semibold">
           Hey! Nice to meet you. I'm Lewis J.A Blackburn, a FullStack Web
           Developer from the UK.
@@ -132,7 +132,7 @@ export const Index: React.FC<IndexProps> = ({posts}) => {
             ))}
           </div>
         </div>
-        <footer className="pt-5">
+        <footer>
           <Icons>
             <Icon icon={SiTypescript} title="TypeScript" />
             <Icon icon={SiReact} title="React.js" />
@@ -162,7 +162,11 @@ export const Index: React.FC<IndexProps> = ({posts}) => {
   )
 }
 function Icons({children}: {children: ReactNode}) {
-  return <div className="flex ml-1 space-x-5 text-gray-500">{children}</div>
+  return (
+    <div className="hidden lg:flex ml-1 space-x-5 text-gray-500">
+      {children}
+    </div>
+  )
 }
 
 function Icon({icon, title}: {icon: IconType; title: string}) {
