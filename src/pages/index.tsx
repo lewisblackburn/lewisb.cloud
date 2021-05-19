@@ -60,7 +60,7 @@ export const Index: React.FC<IndexProps> = ({posts}) => {
         />
         <NowPlaying />
       </div>
-      <div className="flex flex-col space-y-5 my-10 w-full xl:w-7/12">
+      <div className="flex flex-col space-y-5 my-10 w-full xl:w-1/2">
         <h1 className="font-semibold">
           Hey! Nice to meet you. I'm Lewis J.A Blackburn, a FullStack Web
           Developer from the UK.
