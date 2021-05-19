@@ -1,27 +1,12 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const colors = require('tailwindcss/colors')
+
+/** @type {import("@types/tailwindcss/tailwind-config").TailwindConfig } */
 module.exports = {
+  purge: ['./src/**/*.{tsx,ts}'],
   darkMode: 'class',
-  purge: {
-    content: ['./src/**/*.tsx'],
-    options: {
-      safelist: ['dark'],
-    },
-  },
-  theme: {
-    typography: (theme) => ({}),
-    extend: {
-      typography: (theme) => ({
-        dark: {
-          css: {
-            color: 'white',
-          },
-        },
-      }),
-      fontFamily: {
-        mono: ['DM Mono,Georgia,serif', 'monospace'],
-        fira: ['Fira Code', 'monospace'],
-      },
-    },
-  },
+  mode: 'jit',
+  theme: {colors},
   variants: {
     typography: ['dark'],
   },

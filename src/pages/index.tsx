@@ -1,17 +1,15 @@
-import dayjs from 'dayjs'
+import {NowPlaying} from 'components/NowPlaying'
 import {Layout} from 'layouts/Layout'
 import {getAllFilesFrontMatter} from 'lib/mdx'
 import {MdxFrontMatter} from 'models/MdxFrontMatter'
 import {GetStaticProps} from 'next'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
-import React, {Fragment} from 'react'
+import React from 'react'
 
 interface IndexProps {
   posts: MdxFrontMatter[]
 }
-
-// "https://www.figma.com/file/MNbvOwgE5ghxlHEFB9OzZ4/Untitled"
 
 export const getStaticProps: GetStaticProps<IndexProps> = async () => {
   const files: MdxFrontMatter[] = await getAllFilesFrontMatter('articles')
@@ -28,64 +26,84 @@ const Map = dynamic(() => import('../components/Map'), {
 
 export const Index: React.FC<IndexProps> = ({posts}) => {
   return (
-    <Fragment>
-      <Layout>
+    <Layout>
+      <div className="flex items-center space-x-2">
+        <img
+          className="w-16 h-16 rounded-full"
+          src="https://pbs.twimg.com/profile_images/1388587656246878217/LzMeoefq_400x400.jpg"
+          alt=""
+        />
+      </div>
+      <div className="flex flex-col space-y-5 my-10 w-96">
+        <h1 className="font-semibold">
+          Hey! Nice to meet you. I'm Lewis J.A Blackburn, a FullStack Web
+          Developer from the UK.
+        </h1>
+        <div className="flex flex-col space-y-5 text-gray-500">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta at
+            nesciunt autem ipsum animi sapiente! Et neque ut libero, autem nisi
+            distinctio eveniet aperiam repudiandae error, incidunt temporibus,
+            eius quasi!
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
+            quis placeat magnam voluptates maiores, delectus inventore corrupti
+            itaque quos. Officia similique temporibus quia voluptatibus
+            necessitatibus repellendus quos omnis incidunt reiciendis?
+          </p>
+          <div className="flex space-x-5">
+            <a href="">Twitter</a>
+            <a href="">Discord</a>
+            <a href="">Github</a>
+          </div>
+        </div>
         <div>
-          <div className="grid grid-cols-1 lg:grid-cols-2 place-items-center max-w-6xl mx-auto px-6 py-12">
-            <div className="flex flex-col space-y-5">
-              <h1 className="font-mono font-bold tracking-normal text-4xl">
-                I'm Lewis Blackburn.
-              </h1>
-              <p className="text-xl">
-                Hi, I'm Lewis, A Full-Stack React, Typescript and GraphQL web
-                developer focusing in backend development using PostgreSQL,
-                Prisma and Node. This website is a collection of projects and
-                things I've learnt over the years.
-              </p>
-            </div>
+          <h1 className="font-semibold">Projects</h1>
+          <div className="flex flex-col space-y-5 my-5">
+            <Link href="">
+              <a className="px-5 py-2 bg-gray-900 rounded-md" href="">
+                typegraphql-prisma-apollo-react
+              </a>
+            </Link>
+            <Link href="">
+              <a className="px-5 py-2 bg-gray-900 rounded-md" href="">
+                lewisb.cloud
+              </a>
+            </Link>
 
-            <div>img later</div>
+            <Link href="">
+              <a className="px-5 py-2 bg-gray-900 rounded-md" href="">
+                ilistened-to
+              </a>
+            </Link>
+            <Link href="">
+              <a className="px-5 py-2 bg-gray-900 rounded-md" href="">
+                tweetah
+              </a>
+            </Link>
+            <Link href="">
+              <a className="px-5 py-2 bg-gray-900 rounded-md" href="">
+                dotfiles
+              </a>
+            </Link>
           </div>
         </div>
         <div>
-          <div className="grid place-items-center max-w-6xl mx-auto px-6 py-12">
-            {posts.map((post, number) => (
-              <Link href={`/article/${post.slug}`}>
-                <a
-                  key={number}
-                  className="button grid grid-cols-2 items-center w-full"
-                  style={{gridTemplateColumns: '100px 1fr'}}
-                >
-                  <time>{dayjs(post.date).format('MMM D')}</time>
-                  <span className="font-medium">{post.title}</span>
+          <h1 className="font-semibold">Articles</h1>
+          <div className="flex flex-col space-y-5 my-5">
+            {posts.map((post, index) => (
+              <Link href={`article/${post.slug}`}>
+                <a className="px-5 py-2 bg-gray-900 rounded-md" href="">
+                  {post.title}
                 </a>
               </Link>
             ))}
           </div>
         </div>
-        <div>
-          <div className="grid place-items-center max-w-6xl mx-auto px-6 py-12">
-            {[0, 0, 0, 0].map((project: any, number) => (
-              <Link href={``}>
-                <a
-                  key={number}
-                  className="button grid grid-cols-2 items-center w-full"
-                  style={{gridTemplateColumns: '100px 1fr'}}
-                >
-                  <span>title</span>
-                  <span className="font-medium">description</span>
-                </a>
-              </Link>
-            ))}
-          </div>
-        </div>
-        <div className="bg-white">
-          <div className="grid place-items-center max-w-6xl mx-auto px-6 py-12 h-96">
-            <Map />
-          </div>
-        </div>
-      </Layout>
-    </Fragment>
+        <NowPlaying />
+      </div>
+    </Layout>
   )
 }
 

@@ -1,0 +1,9 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+	<title>logo</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: #000000 } 
+	</style>
+	<path id="Shape 1" class="shp0" d="M267.66 2L413.38 99.21L151.72 491.46L6 394.25L267.66 2Z" />
+	<path id="Layer 1" class="shp0" d="M396.52 510.42C335.97 510.42 287.03 461.48 287.03 400.93C287.03 340.39 335.97 291.45 396.52 291.45C457.06 291.45 506 340.39 506 400.93C506 461.48 457.06 510.42 396.52 510.42Z" />
+</svg>

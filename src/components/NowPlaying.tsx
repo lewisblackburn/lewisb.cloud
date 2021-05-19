@@ -10,7 +10,7 @@ export const NowPlaying: React.FC<NowPlayingProps> = ({}) => {
   const {data}: {data?: Track} = useSWR('/api/now-playing', fetcher)
 
   return (
-    <span className="flex items-center justify-center space-x-2">
+    <span className="flex items-center space-x-2">
       <SiSpotify className="text-spotify" />
       <span className="inline-flex items-center justify-center">
         {data?.isPlaying ? (
