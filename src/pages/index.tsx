@@ -55,7 +55,7 @@ export const Index: React.FC<IndexProps> = ({posts}) => {
       <div className="flex items-center space-x-5">
         <img
           className="w-16 h-16 rounded-full"
-          src="https://pbs.twimg.com/profile_images/1388587656246878217/LzMeoefq_400x400.jpg"
+          src="assets/authors/lewisblackburn.png"
           alt=""
         />
         <NowPlaying />
