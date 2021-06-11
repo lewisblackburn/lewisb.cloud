@@ -69,11 +69,9 @@ export const Index: React.FC<IndexProps> = ({posts}) => {
         </h1>
         <div className="flex flex-col space-y-5 text-gray-500">
           <p>
-            I like to sit, I've been doing it since a very young age. I'd say
-            I'm an expert, so much so that I started to get bored just sitting,
-            so I decided to learn how to program. I first learnt p5.js which has
-            lead to my love and interest in web development techonologies and
-            open source projects.
+            People always ask me, Lewis? Yeah. Apart from being a full-time
+            comedian, I first learnt p5.js which has lead to my love and
+            interest in web development techonologies and open source projects.
           </p>
           <div className="flex space-x-5">
             <a className="button" href="https://github.com/lewisblackburn">
