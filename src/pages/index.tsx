@@ -1,4 +1,3 @@
-import DarkModeToggle from 'components/DarkModeToggle'
 import {NowPlaying} from 'components/NowPlaying'
 import {Layout} from 'layouts/Layout'
 import {getAllFilesFrontMatter} from 'lib/mdx'
@@ -15,6 +14,8 @@ import {
   SiGit,
   SiGithub,
   SiHtml5,
+  SiInstagram,
+  SiLinkedin,
   SiMarkdown,
   SiNextDotJs,
   SiNodeDotJs,
@@ -25,6 +26,7 @@ import {
   SiSlack,
   SiSpotify,
   SiTailwindcss,
+  SiTwitter,
   SiTypescript,
   SiVisualstudiocode,
   SiWebpack,
@@ -55,7 +57,7 @@ export const Index: React.FC<IndexProps> = ({posts}) => {
       <div className="flex items-center space-x-5">
         <img
           className="w-16 h-16 rounded-full"
-          src="assets/authors/lewisblackburn.png"
+          src="assets/authors/lb2.jpeg"
           alt=""
         />
         <NowPlaying />
@@ -67,25 +69,24 @@ export const Index: React.FC<IndexProps> = ({posts}) => {
         </h1>
         <div className="flex flex-col space-y-5 text-gray-500">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta at
-            nesciunt autem ipsum animi sapiente! Et neque ut libero, autem nisi
-            distinctio eveniet aperiam repudiandae error, incidunt temporibus,
-            eius quasi!
+            I like to sit, I've been doing it since a very young age. I'd say
+            I'm an expert, so much so that I started to get bored just sitting,
+            so I decided to learn how to program. I first learnt p5.js which has
+            lead to my love and interest in web development techonologies and
+            open source projects.
           </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-            quis placeat magnam voluptates maiores, delectus inventore corrupti
-            itaque quos. Officia similique temporibus quia voluptatibus
-            necessitatibus repellendus quos omnis incidunt reiciendis?
-          </p>
-
           <div className="flex space-x-5">
-            <DarkModeToggle />
-            <a className="button" href="">
-              Twitter
+            <a className="button" href="https://github.com/lewisblackburn">
+              <SiGithub />
             </a>
-            <a className="button" href="">
-              Github
+            <a className="button" href="https://instagram.com/lewis.svg">
+              <SiInstagram />
+            </a>
+            <a className="button" href="/">
+              <SiLinkedin />
+            </a>
+            <a className="button" href="https://twitter.com/zxffo">
+              <SiTwitter />
             </a>
           </div>
         </div>
