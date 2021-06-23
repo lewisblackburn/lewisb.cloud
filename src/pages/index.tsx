@@ -70,8 +70,8 @@ export const Index: React.FC<IndexProps> = ({posts}) => {
         <div className="flex flex-col space-y-5 text-gray-500">
           <p>
             People always ask me, Lewis? Yeah. A fun fact about me is that my
-            favourtie TV shows are the ones that tell you when to laugh! Apart
-            from being a full-time comedian, I first developed my ineterest in
+            favourite TV shows are the ones that tell you when to laugh! Apart
+            from being a full-time comedian, I first developed my interest in
             web development through learning p5.js which has also lead to my
             love of open source projects as well. You can checkout mine on my
             Github below.
