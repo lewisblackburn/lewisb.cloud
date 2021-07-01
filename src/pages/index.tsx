@@ -83,7 +83,7 @@ export const Index: React.FC<IndexProps> = ({posts}) => {
             <a className="button" href="https://instagram.com/lewis.svg">
               <SiInstagram />
             </a>
-            <a className="button" href="/">
+            <a className="button" href="https://www.linkedin.com/in/zxffo">
               <SiLinkedin />
             </a>
             <a className="button" href="https://twitter.com/zxffo">
