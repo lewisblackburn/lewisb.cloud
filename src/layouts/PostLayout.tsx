@@ -2,7 +2,6 @@ import LazyImage from 'components/LazyImage'
 import dayjs from 'dayjs'
 import {MdxFrontMatter} from 'models/MdxFrontMatter'
 import {ArticleJsonLd, NextSeo} from 'next-seo'
-import Link from 'next/link'
 import React from 'react'
 import {Toaster} from 'react-hot-toast'
 import {Layout} from '../layouts/Layout'
@@ -82,7 +81,7 @@ export const PostLayout: React.FC<PostLayoutProps> = ({
                   {dayjs(date).format('MMMM DD, YYYY')}
                 </time>
               </p>
-              <div className="flex space-x-4">
+              {/* <div className="flex space-x-4">
                 {tags.map((tag, index) => (
                   <Link href={`/tag/${tag}`}>
                     <a className="button bg-gray-50" key={index}>
@@ -90,7 +89,7 @@ export const PostLayout: React.FC<PostLayoutProps> = ({
                     </a>
                   </Link>
                 ))}
-              </div>
+              </div> */}
             </div>
           </div>
           {children}

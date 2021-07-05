@@ -1,4 +1,3 @@
-import {Provider} from 'jotai'
 import {DefaultSeo} from 'next-seo'
 import {ThemeProvider} from 'next-themes'
 import {AppProps} from 'next/app'
@@ -24,9 +23,7 @@ function MyApp({Component, pageProps, router}: AppProps) {
     <StrictMode>
       <DefaultSeo {...SEO} />
       <ThemeProvider attribute="class" defaultTheme="dark">
-        <Provider>
-          <Component {...pageProps} />
-        </Provider>
+        <Component {...pageProps} />
       </ThemeProvider>
     </StrictMode>
   )

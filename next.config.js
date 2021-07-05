@@ -9,6 +9,15 @@ const nextConfig = {
   publicRuntimeConfig: {
     mapbox: process.env.MAPBOX_API_TOKEN,
   },
+  experimental: {
+    turboMode: true,
+  },
+  future: {
+    strictPostcssConfiguration: true,
+  },
+  images: {
+    domains: ['images.pexels.com', 'i.scdn.co'],
+  },
 }
 
 module.exports = withPlugins(

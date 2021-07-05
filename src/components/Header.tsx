@@ -1,44 +1,23 @@
-import Link from 'next/link'
+import router from 'next/router'
 import React from 'react'
-import DarkModeToggle from './DarkModeToggle'
+import {Button} from './Button'
 
 interface HeaderProps {}
-
-const HeaderLink: React.FC<{
-  href: string
-  icon?: string
-  className?: string
-  external?: boolean
-}> = ({href, icon, className, external = false, children}) => {
-  return (
-    <Link href={href}>
-      <a
-        target={`${external ? '_blank' : ''}`}
-        className={`button ${className}`}
-      >
-        {icon && <span className="mr-4">{icon}</span>}
-        {children}
-      </a>
-    </Link>
-  )
-}
-
 export const Header: React.FC<HeaderProps> = () => {
+  // const {theme, setTheme} = useTheme()
+  // onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+
   return (
-    <header className="flex justify-center md:justify-between items-center">
-      <HeaderLink href="/" icon="🕊" className="font-mono">
-        Lewis Blackburn
-      </HeaderLink>
-      <div className="hidden md:flex items-center">
-        <HeaderLink href="https://twitter.com/zxffo" external>
-          Twitter
-        </HeaderLink>
-        <HeaderLink href="https://github.com/lewisblackburn" external>
-          Github
-        </HeaderLink>
-        <HeaderLink href="/404">404</HeaderLink>
-        <DarkModeToggle />
-      </div>
+    <header className="flex -ml-3 mb-16">
+      <Button onClick={() => router.push('/')}>
+        <svg height="30" viewBox="0 0 20 20" className="text-fg fill-current">
+          <path d="M6.023 7.296v5.419H3.648C1.644 12.715 0 14.316 0 16.342 0 18.355 1.644 20 3.648 20a3.657 3.657 0 003.648-3.659v-2.375h5.397v2.376A3.657 3.657 0 0016.343 20c2.004 0 3.647-1.644 3.647-3.659 0-2.025-1.643-3.626-3.648-3.626h-2.375v-5.42h2.376c2.004 0 3.647-1.611 3.647-3.626C19.99 1.644 18.346 0 16.341 0c-2.014 0-3.648 1.644-3.648 3.67v2.364H7.296V3.669C7.296 1.644 5.663 0 3.648 0 1.644 0 0 1.644 0 3.67c0 2.014 1.644 3.626 3.648 3.626h2.375zm-2.375-1.24c-1.294 0-2.375-1.083-2.375-2.387 0-1.315 1.081-2.396 2.375-2.396 1.304 0 2.375 1.081 2.375 2.396v2.386H3.648zm12.694 0h-2.376V3.668c0-1.315 1.071-2.396 2.376-2.396 1.293 0 2.375 1.081 2.375 2.396 0 1.304-1.082 2.386-2.375 2.386zm-9.046 6.67V7.274h5.397v5.45H7.296zm-3.648 1.219h2.375v2.386a2.387 2.387 0 01-2.375 2.386 2.394 2.394 0 01-2.375-2.386 2.394 2.394 0 012.375-2.386zm12.694 0a2.394 2.394 0 012.375 2.386 2.394 2.394 0 01-2.375 2.386 2.387 2.387 0 01-2.376-2.386v-2.386h2.376z" />
+        </svg>
+      </Button>
+
+      <Button>
+        <span className="text-3xl">k</span>
+      </Button>
     </header>
   )
 }
