@@ -1,11 +1,8 @@
 import {Footer} from 'components/Footer'
 import {NowPlaying} from 'components/NowPlaying'
 import {Layout} from 'layouts/Layout'
-import fetcher from 'lib/fetcher'
 import {MdxFrontMatter} from 'models/MdxFrontMatter'
-import {Track} from 'models/Track'
-import React, {useEffect, useState} from 'react'
-import useSWR from 'swr'
+import React from 'react'
 
 interface IndexProps {
   posts: MdxFrontMatter[]
@@ -16,14 +13,7 @@ interface IndexProps {
 //   ssr: false,
 // })
 
-export const Index: React.FC<IndexProps> = ({posts}) => {
-  const {data}: {data?: Track} = useSWR('/api/now-playing', fetcher)
-  const [url, setURL] = useState('')
-
-  useEffect(() => {
-    if (data?.isPlaying) setURL(data?.albumImageUrl)
-  }, [data?.isPlaying, data?.albumImageUrl])
-
+export const Index: React.FC<IndexProps> = ({}) => {
   return (
     <Layout>
       <div className="flex flex-col space-y-8">
