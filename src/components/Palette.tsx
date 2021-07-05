@@ -5,6 +5,7 @@ import {useEffect, useState} from 'react'
 import CommandPalette from 'react-command-palette'
 
 export default function Palette() {
+  // @ts-ignore
   const {theme, setTheme} = useTheme()
 
   const allCommands = [
