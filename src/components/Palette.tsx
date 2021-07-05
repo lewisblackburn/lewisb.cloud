@@ -92,6 +92,7 @@ export default function Palette() {
   }
 
   // get authour's books to use as subcommands
+  // @ts-ignore
   const commandInNested = (nested: any) => {
     if (nested) {
       return allCommands.filter((command) => command.name === nested)[0]
