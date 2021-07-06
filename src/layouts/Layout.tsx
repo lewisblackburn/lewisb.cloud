@@ -1,13 +1,8 @@
-import {Header} from 'components/Header'
-import dynamic from 'next/dynamic'
-import React from 'react'
+import {Header} from 'components/Header';
+import {Palette} from 'components/Palette/Palette';
+import React from 'react';
 
 interface LayoutProps {}
-
-const Palette = dynamic(() => import('../components/Palette'), {
-  loading: () => <div className=""></div>,
-  ssr: false,
-})
 
 export const Layout: React.FC<LayoutProps> = ({children}) => {
   return (
@@ -18,6 +13,6 @@ export const Layout: React.FC<LayoutProps> = ({children}) => {
         {children}
       </div>
     </div>
-  )
-}
-export default Layout
+  );
+};
+export default Layout;

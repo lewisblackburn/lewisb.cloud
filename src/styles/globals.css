@@ -17,6 +17,10 @@
   display: none;
 }
 
+*::-webkit-scrollbar {
+  display: none !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -85,116 +89,4 @@ html {
 
 .article img {
   @apply rounded-lg;
-}
-
-/* command palette */
-
-.my-modal {
-  width: 700px;
-  position: absolute;
-  top: 80px;
-  left: 50%;
-  right: auto;
-  bottom: auto;
-  border: 0px none;
-  outline: none;
-  box-shadow: rgb(0, 0, 0) 0px 2px 4px 0px;
-  margin-right: -50%;
-  transform: translate(-50%, 0px);
-
-  @apply rounded-md bg-bg;
-}
-
-.my-overlay {
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  background-color: rgba(0, 0, 0, 0.75);
-}
-
-.my-header {
-  color: #d7dae0;
-}
-
-.my-content {
-  box-shadow: rgb(0, 0, 0) 0px 2px 4px 0px;
-  position: absolute;
-  top: 80px;
-  left: 50%;
-  right: auto;
-  bottom: auto;
-  margin-right: -50%;
-  transform: translate(-50%, 0);
-  border: 0px none;
-  background: rgb(48, 51, 56);
-  overflow: hidden;
-  -webkit-overflow-scrolling: touch;
-  outline: none;
-  min-width: 600px;
-}
-
-.my-container {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, sans-serif;
-  font-weight: lighter;
-  font-size: 12px;
-}
-
-.my-containerOpen {
-}
-
-.my-input {
-  width: 700px;
-  outline: none;
-
-  @apply text-fg text-lg rounded-md bg-bg p-4;
-}
-
-.my-inputOpen {
-}
-
-.my-inputFocused {
-}
-
-.my-suggestionsContainer {
-}
-
-.my-suggestionsContainerOpen {
-  overflow: hidden;
-  max-height: 315px;
-  margin-top: 10px;
-}
-
-.my-suggestionsList {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
-.my-suggestion {
-  border-top: 0px none;
-  cursor: pointer;
-
-  @apply font-medium text-sm bg-bg text-cg p-4;
-}
-
-.my-suggestion b {
-  color: #598cef;
-  font-weight: bold;
-}
-.my-suggestionFirst {
-}
-
-.my-suggestionHighlighted {
-  @apply bg-lightest-gray text-fg;
-}
-
-.my-spinner {
-  border-top: 0.4em solid rgba(255, 255, 255, 0.2);
-  border-right: 0.4em solid rgba(255, 255, 255, 0.2);
-  border-bottom: 0.4em solid rgba(255, 255, 255, 0.2);
-  border-left: 0.4em solid rgb(255, 255, 255);
 }
